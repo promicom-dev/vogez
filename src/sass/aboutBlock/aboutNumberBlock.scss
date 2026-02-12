@@ -1,0 +1,49 @@
+.aboutNumberBlock{
+  margin-bottom: 34px;
+  @media screen and (min-width: 991px) {
+    margin-bottom: 64px;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    &_item{
+      flex: 1;
+      padding: 12px 16px;
+      border: 1px solid rgba(138, 138, 142, 1);
+      border-radius: 4px;
+      @media screen and (min-width: 991px) {
+        padding: 12px 16px 24px;
+      }
+      @media screen and (max-width: 766px) {
+        flex: 100%;
+      }
+      &:last-child{
+        flex: 100%;
+      }
+      @media screen and (min-width: 991px) {
+        &:last-child{
+          flex: 1;
+        }
+      }
+      &-title{
+        font-size: 24px;
+        @media screen and (min-width: 991px) {
+          font-size: 32px;
+          padding-bottom: 16px;
+        }
+        font-weight: 700;
+        line-height: 140%;
+        color: rgba(0, 84, 170, 1);
+        padding-bottom: 8px;
+      }
+      &-text{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+        color: rgba(0, 84, 170, 1);
+      }
+    }
+  }
+}

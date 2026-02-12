@@ -1,0 +1,26 @@
+.aboutGeoBlock{
+  padding-top: 16px;
+  padding-bottom: 32px;
+  background: rgba(242, 249, 255, 1);
+  @media screen and (min-width: 991px) {
+    padding-top: 32px;
+    padding-bottom: 64px;
+  }
+  &__title{
+    font-size: 24px;
+        @media screen and (min-width: 991px) {
+          font-size: 32px;
+        }
+    font-weight: 700;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: rgba(0, 84, 170, 1);
+    padding-bottom: 32px;
+  }
+  &__content{
+    svg{
+      width: 100%;
+      height: max-content;
+    }
+  }
+}

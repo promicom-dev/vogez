@@ -1,0 +1,93 @@
+.aboutSlideBlock{
+  margin-bottom: 34px;
+  @media screen and (min-width: 991px) {
+    margin-bottom: 64px;
+  }
+  &__content{
+    padding: 32px 16px;
+    gap: 12px;
+    border: 1px solid rgba(138, 138, 142, 1);
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    @media screen and (min-width: 991px) {
+      padding: 64px 32px;
+      gap: 24px;
+      flex-direction: row;
+    }
+    &_info{
+      padding-bottom: 16px;
+      @media screen and (min-width: 991px) {
+        max-width: 442px;
+        padding-bottom: 0;
+      }
+      &-title{
+        font-size: 24px;
+        @media screen and (min-width: 991px) {
+          font-size: 32px;
+        }
+        font-weight: 700;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: rgba(0, 84, 170, 1);
+        padding-bottom: 8px;
+      }
+      &-text{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgba(0, 0, 0, 1);
+      }
+    }
+    &_slide{
+      max-width: 100%;
+      width: 100%;
+      @media screen and (min-width: 991px) {
+        max-width: 572px;
+      }
+
+      .splide__list{
+        li{
+          &:nth-child(2n){
+            .slideItem{
+              background: rgba(242, 249, 255, 1);
+              color: rgba(0, 0, 0, 1);
+            }
+          }
+        }
+      }
+      .slideItem{
+        max-width: 100%;
+        width: 100%;
+        @media screen and (min-width: 991px) {
+          max-width: 572px;
+          padding: 20px 20px 36px;
+        }
+        min-height: 300px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 8px;
+        background: rgba(0, 84, 170, 1);
+        color: rgba(255, 255, 255, 1);
+        &__title{
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 140%;
+          text-transform: uppercase;
+        }
+        &__text{
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          p{
+            padding: 6px 0;
+          }
+        }
+      }
+    }
+  }
+}
