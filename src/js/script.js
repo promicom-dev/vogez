@@ -273,11 +273,25 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
     }
 
+    let touchStartY = 0;
+
     descriptionsColumn.addEventListener('touchstart', function(e) {
-        this.lastTouchY = e.touches[0].clientY;
+        touchStartY = e.touches[0].clientY;
     }, { passive: true });
 
-    descriptionsColumn.addEventListener('touchmove', handleTouchMove, { passive: false });
+    descriptionsColumn.addEventListener('touchmove', function(e) {
+        const touch = e.touches[0];
+        const deltaY = touchStartY - touch.clientY;
+
+        const isAtTop = this.scrollTop <= 0;
+        const isAtBottom = this.scrollTop + this.clientHeight >= this.scrollHeight;
+
+        if (window.innerWidth > 769 && !(deltaY < 0 && isAtTop) && !(deltaY > 0 && isAtBottom)) {
+            e.preventDefault();
+        }
+
+        touchStartY = touch.clientY;
+    }, { passive: false });
 
     yearsColumn.addEventListener('touchstart', function(e) {
         this.lastTouchY = e.touches[0].clientY;
