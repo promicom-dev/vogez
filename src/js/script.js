@@ -274,6 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     let touchStartY = 0;
+    let touchStartX = 0;
 
     descriptionsColumn.addEventListener('touchstart', function(e) {
         touchStartY = e.touches[0].clientY;
@@ -286,18 +287,31 @@ document.addEventListener('DOMContentLoaded', function() {
         const isAtTop = this.scrollTop <= 0;
         const isAtBottom = this.scrollTop + this.clientHeight >= this.scrollHeight;
 
-        if (window.innerWidth > 769 && !(deltaY < 0 && isAtTop) && !(deltaY > 0 && isAtBottom)) {
+        if (window.innerWidth > 1025 && !(deltaY < 0 && isAtTop) && !(deltaY > 0 && isAtBottom)) {
             e.preventDefault();
         }
 
         touchStartY = touch.clientY;
     }, { passive: false });
 
+
     yearsColumn.addEventListener('touchstart', function(e) {
-        this.lastTouchY = e.touches[0].clientY;
+        touchStartX = e.touches[0].clientX;
     }, { passive: true });
 
-    yearsColumn.addEventListener('touchmove', handleTouchMove, { passive: false });
+    yearsColumn.addEventListener('touchmove', function(e) {
+        const touch = e.touches[0];
+        const deltaY = touchStartX - touch.clientX;
+
+        const isAtTop = this.scrollTop <= 0;
+        const isAtBottom = this.scrollTop + this.clientHeight >= this.scrollHeight;
+
+        if (window.innerWidth > 1025 && !(deltaY < 0 && isAtTop) && !(deltaY > 0 && isAtBottom)) {
+            e.preventDefault();
+        }
+
+        touchStartX = touch.clientX;
+    }, { passive: false });
 
     descriptionsColumn.addEventListener('scroll', debounce(() => {
         if (!isProgrammaticScroll) {
