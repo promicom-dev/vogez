@@ -40,7 +40,7 @@
 @media screen and (min-width: 1220px) {
   .aboutFirstBlock__content .slideItem {
     padding: 41px;
-    min-height: 590px
+    min-height: 520px
   }
 }
 
@@ -59,6 +59,19 @@
   object-fit: cover;
   display: block
 }
+
+@media (max-width: 767px) {
+  .aboutFirstBlock__content_bg picture:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
 
 .aboutFirstBlock__content_info {
   max-width: 629px;
@@ -727,4 +740,10 @@
   height: auto;
   display: block;
 }
-
+.description-text {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  display: block;
+}
