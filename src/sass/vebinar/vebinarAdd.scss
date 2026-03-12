@@ -1,0 +1,340 @@
+.vebinarAdd{
+  padding: 20px 0;
+  @media screen and (min-width: 992px) {
+    padding: 20px 0 64px;
+  }
+  &__box{
+    background: #F2F9FF;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    @media screen and (min-width: 992px) {
+      padding: 64px 32px;
+    }
+    &_image{
+      width: 286px;
+      position: relative;
+      margin-bottom: 32px;
+      @media screen and (min-width: 992px) {
+        margin-bottom: 64px;
+      }
+      & picture, img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+      &-text{
+        position: absolute;
+        color: #FFFFFF;
+        font-size: 44px;
+        line-height: 44px;
+        text-transform: uppercase;
+        font-weight: 500;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &_title{
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 700;
+      color: #000000;
+      padding-bottom: 16px;
+      text-align: center;
+      @media screen and (max-width: 566px) {
+        font-size: 28px;
+      }
+    }
+    &_text{
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 400;
+      color: #8C8C8C;
+      padding-bottom: 44px;
+      text-align: center;
+    }
+    .btn-blue{
+      height: 56px;
+      padding: 16px;
+      @media screen and (max-width: 767px) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+.vebinarList{
+  margin: 18px 0 0;
+  background: #0054AA;
+  padding: 32px 0;
+  @media screen and (min-width: 992px) {
+    padding: 64px 0;
+  }
+  @media screen and (min-width: 1440px) {
+    margin: 18px -24px 0;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .item{
+    @media screen and (min-width: 992px) {
+      display: flex;
+    }
+    &__half{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      background: #FFFFFF;
+      padding: 24px;
+      border-radius: 0 0 8px 8px ;
+      @media screen and (min-width: 992px) {
+        border-radius:  0 8px 8px 0;
+        padding: 64px 41px 64px 32px;
+        gap: 24px;
+        width: 50%;
+      }
+      &:first-child{
+        border-radius: 8px 8px 0 0;
+        @media screen and (min-width: 992px) {
+          border-radius: 8px 0 0 8px;
+          &:after {
+            content: '';
+            position: absolute;
+            left: inherit!important;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px!important;
+            height: inherit!important;
+            background-image: linear-gradient(to bottom, #000000 10px, transparent 10px)!important;
+            background-size: 1px 20px!important;
+            background-repeat: repeat-y!important;
+          }
+        }
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 1px;
+          width: 100%;
+          background-image: linear-gradient(to right, #000000 10px, transparent 10px);
+          background-size: 20px 1px;
+          background-repeat: repeat-x;
+        }
+        .item__half_title{
+          font-size: 32px;
+          line-height: 40px;
+          font-weight: 700;
+          color: #000000;
+          @media screen and (max-width: 566px) {
+            font-size: 28px;
+          }
+        }
+        .item__half_time{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 16px;
+          @media screen and (max-width: 566px) {
+            flex-wrap: wrap;
+            &>div{
+              width: 100%;
+            }
+          }
+          &>div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #8A8A8E;
+            border-radius: 8px;
+            padding: 10px 16px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 600;
+            color: #0054AA;
+
+          }
+        }
+        .item__half_icon{
+          width: 114px;
+          & picture, img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+          }
+        }
+      }
+      &:last-child{
+        position: relative;
+        @media screen and (min-width: 992px) {
+          padding-left: 104px;
+        }
+        .item__half_icon{
+          position: absolute;
+          top: 24px;
+          left: 24px;
+          width: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @media screen and (min-width: 992px) {
+            top: 72px;
+            left: 42px;
+            width: 46px;
+          }
+          & picture, img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+          }
+        }
+        .item__half_title{
+          font-size: 24px;
+          line-height: 32px;
+          font-weight: 700;
+          color: #000000;
+          @media screen and (max-width: 991px) {
+            padding-left: 60px;
+            padding-top: 8px;
+          }
+        }
+        .item__half_text{
+          font-size: 20px;
+          line-height: 28px;
+          font-weight: 400;
+          color: #000000;
+          padding-bottom: 28px;
+        }
+
+        .btn-blue{
+          max-width: 130px;
+          height: 56px;
+          padding: 16px;
+          @media screen and (max-width: 767px) {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.vebinarListAdd{
+  padding: 32px 0;
+  @media screen and (min-width: 992px) {
+    padding: 64px 0;
+  }
+  &__box{
+    background: #F2F9FF;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    @media screen and (min-width: 992px) {
+      padding: 64px 32px;
+    }
+    &_title{
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 700;
+      color: #0054AA;
+      padding-bottom: 16px;
+      text-align: center;
+      @media screen and (max-width: 566px) {
+        font-size: 28px;
+      }
+    }
+    &_text{
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 400;
+      color: #000000;
+      padding-bottom: 32px;
+      text-align: center;
+      @media screen and (min-width: 992px) {
+        padding-bottom: 64px;
+      }
+    }
+    .btn-blue{
+      height: 56px;
+      padding: 16px;
+    }
+  }
+}
+
+
+
+#vebinar-popup,#vebinar-note-popup {
+  padding: 50px 40px;
+  border-radius: 8px;
+  @media screen and (max-width: 676px) {
+    max-height: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+  .input-wrapper {
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .name-vebinar{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    max-width: 392px;
+    padding-bottom: 24px;
+  }
+  .popover-header{
+    display: flex;
+    button.close{
+      @media screen and (min-width: 768px) {
+        right: inherit;
+        top: inherit;
+        position: relative;
+      }
+    }
+  }
+  .quest-list__sheet{
+    .title {
+      flex-direction: column;
+    }
+    h3{
+      font-size: 32px;
+      line-height: 38px;
+      font-weight: 700;
+      color: #000000;
+    }
+    .title__h4{
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+      color: #000000;
+    }
+    .title__h5{
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #000000;
+    }
+  }
+}

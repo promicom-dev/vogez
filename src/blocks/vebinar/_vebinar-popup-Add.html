@@ -1,0 +1,45 @@
+<div popover="" id="vebinar-popup">
+    <div class="popover-header flex">
+        <div class="popover-title">Предложить тему</div>
+        <button popovertarget="vebinar-popup" popovertargetaction="hide" class="close">×</button>
+    </div>
+
+    <form data-form="vebinar" action="">
+        <div class="input-wrapper">
+            <input type="text" name="company" maxlength="300" placeholder="Название организации">
+        </div>
+        <div class="input-wrapper">
+            <input type="text" name="user" maxlength="300" placeholder="Контактное лицо (ФИО)">
+        </div>
+        <div class="input-wrapper">
+            <input type="text" data-maska="+375(##)###-##-##" name="phone" placeholder="Телефон *"  required="">
+        </div>
+        <div class="input-wrapper">
+            <input type="email" name="email" maxlength="40" required="" placeholder="E-mail *">
+        </div>
+        <div class="input-wrapper">
+            <input type="text" name="theme" maxlength="300" placeholder="Тема">
+        </div>
+
+        <div class="input-wrapper">
+            <div class="form-popover-note"> * Это поле не может быть пустым</div>
+        </div>
+
+        <div class="input-wrapper">
+            <label for="policy" class="checkbox">
+                <input value="1" required="" name="policy" type="checkbox" id="policy">
+                <span>Отправляя вопрос вы соглашаетесь с <a href="/privacy/">Политикой конфиденциальности</a> </span>
+            </label>
+
+            <label class="checkbox">
+                <input value="1" required="" name="personal" type="checkbox" id="personal">
+                <span>Даю согласие на обработку моих персональных данных  для получения рекламно-информационной рассылки посредством Email.</span>
+            </label>
+        </div>
+
+        <div class="input-wrapper">
+            <button class="btn-blue btn-large btn">Написать нам</button>
+        </div>
+
+    </form>
+</div>

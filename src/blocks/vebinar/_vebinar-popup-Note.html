@@ -1,0 +1,49 @@
+<div popover="" id="vebinar-note-popup">
+    <div class="popover-header flex">
+        <div class="popover-title">Записаться на вебинар</div>
+        <button popovertarget="vebinar-note-popup" popovertargetaction="hide" class="close">×</button>
+    </div>
+    <div class="name-vebinar">
+        Как подобрать электропривод  с регулирующим клапаном?
+    </div>
+
+
+    <form data-form="vebinar-note" action="">
+        <div class="input-wrapper">
+            <input type="text" name="company" maxlength="300" placeholder="Название организации">
+        </div>
+        <div class="input-wrapper">
+            <input type="text" name="user" maxlength="300" placeholder="Контактное лицо (ФИО)">
+        </div>
+        <div class="input-wrapper">
+            <input type="text" data-maska="+375(##)###-##-##" name="phone" placeholder="Телефон *" required="">
+        </div>
+        <div class="input-wrapper">
+            <input type="email" name="email" maxlength="40" required="" placeholder="E-mail *">
+        </div>
+        <div class="input-wrapper">
+            <input type="text" name="comment" maxlength="300" placeholder="Комментарий">
+        </div>
+
+        <div class="input-wrapper">
+            <div class="form-popover-note"> * Это поле не может быть пустым</div>
+        </div>
+
+        <div class="input-wrapper">
+            <label for="policyNote" class="checkbox">
+                <input value="2" required="" name="policyNote" type="checkbox" id="policyNote">
+                <span>Отправляя вопрос вы соглашаетесь с <a href="/privacy/">Политикой конфиденциальности</a> </span>
+            </label>
+
+            <label for="personalNote" class="checkbox">
+                <input value="2" required="" name="personalNote" type="checkbox" id="personalNote">
+                <span>Даю согласие на обработку моих персональных данных  для получения рекламно-информационной рассылки посредством Email.</span>
+            </label>
+        </div>
+
+        <div class="input-wrapper">
+            <button class="btn-blue btn-large btn">Записаться</button>
+        </div>
+
+    </form>
+</div>
