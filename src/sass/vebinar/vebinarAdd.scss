@@ -171,6 +171,8 @@
         }
         .item__half_icon{
           width: 114px;
+          position: relative;
+          bottom: -8px;
           & picture, img{
             width: 100%;
             height: 100%;
@@ -287,9 +289,12 @@
   padding: 50px 40px;
   border-radius: 8px;
   @media screen and (max-width: 676px) {
-    max-height: 100%;
-    height: 100%;
+    padding: 40px 24px;
+    max-height: 90%;
+    height: max-content;
     overflow-y: auto;
+    margin-bottom: 0;
+    border-radius: 8px 8px 0 0;
   }
   .input-wrapper {
     margin-bottom: 24px;
@@ -304,6 +309,9 @@
     max-width: 392px;
     padding-bottom: 24px;
   }
+  button.close{
+    right: 15px;
+  }
   .popover-header{
     display: flex;
     button.close{
@@ -317,18 +325,27 @@
   .quest-list__sheet{
     .title {
       flex-direction: column;
+      @media screen and (max-width: 767px) {
+        text-align: center;
+      }
     }
     h3{
-      font-size: 32px;
+      font-size: 28px;
       line-height: 38px;
       font-weight: 700;
       color: #000000;
+      @media screen and (min-width: 768px) {
+        font-size: 32px;
+      }
     }
     .title__h4{
-      font-size: 24px;
+      font-size: 22px;
       line-height: 32px;
       font-weight: 700;
       color: #000000;
+      @media screen and (min-width: 768px) {
+        font-size: 24px;
+      }
     }
     .title__h5{
       font-size: 16px;
