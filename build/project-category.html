@@ -261,7 +261,6 @@
 </header>
 
         <main class="page">
-
                 <section class="breadcrumbs">
     <div class="breadcrumbs__container container">
         <ul>
@@ -274,72 +273,101 @@
         </ul>
     </div>
 </section>
-                <section class="vebinarAdd">
+                <section class="project">
     <div class="container">
-        <div class="vebinarAdd__box">
-            <div class="vebinarAdd__box_image">
-                <picture>
-                    <img src="images/vebinar/Union.png">
-                </picture>
-                <div class="vebinarAdd__box_image-text">вебинарЫ</div>
+        <div class="project__header">
+            <h1>Проекты</h1>
+        </div>
+        <div class="project__categories">
+            <ul class="links">
+                <li ><a href="/project.html">Все</a></li>
+                <li class="active"><a href="/project-category.html">Приборы учета</a></li>
+                <li><a href="/project-category.html">Тепловая автоматика</a></li>
+                <li><a href="/project-category.html">Теплообменники</a></li>
+                <li><a href="/project-category.html">Электроприводы</a></li>
+                <li><a href="/project-category.html">Регулирующая арматура</a></li>
+            </ul>
+        </div>
+        <div class="project__items">
+            <div class="item">
+                <a href="/project-item.html" class="item__image">
+                    <picture>
+                        <img src="images/firstScreen.jpg">
+                    </picture>
+                </a>
+                <div class="item__content">
+                    <div class="item__content_tags">
+                        <a href="/project-item.html">Регулирующая арматура</a>
+                    </div>
+                    <div class="item__content_title">
+                        <a href="/project-item.html">Инженерное решение Вогез для современного обучающего заведения в Минске</a>
+                    </div>
+                    <div class="item__content_text">Для определения объема и объемного расхода жидкости, протекающей в закрытой трубопроводной системе, используются специальные измерительные устройства — расходомеры-счетчики. Приборы применяются для учета водных и энергетических ресурсов в узлах учета воды, тепла, на теплоисточниках, очистных сооружениях, техночистных сооружениях.</div>
+                    <div class="item__content_date">17.07.2025</div>
+                </div>
             </div>
-            <div class="vebinarAdd__box_title">Помогите нам выбрать тему</div>
-            <div class="vebinarAdd__box_text">Пока в расписании нет запланированных вебинаров.<br/>
-                Оставьте заявку и напишите, какая тема вам интересна — мы учтем это при подготовке следующих мероприятий.
+            <div class="item">
+                <a href="/project-item.html" class="item__image">
+                    <picture>
+                        <img src="images/product1.jpg">
+                    </picture>
+                </a>
+                <div class="item__content">
+                    <div class="item__content_tags">
+                        <a href="/project-item.html">Регулирующая арматура</a>
+                    </div>
+                    <div class="item__content_title">
+                        <a href="/project-item.html">Почему Вогез круче всех в мире?</a>
+                    </div>
+                    <div class="item__content_text">Для определения объема и объемного расхода жидкости, протекающей в закрытой, протекающей в закрытой</div>
+                    <div class="item__content_date">17.07.2025</div>
+                </div>
             </div>
-            <button class="btn-blue" popovertarget="vebinar-popup">Предложить тему</button>
+            <div class="item">
+                <a href="/project-item.html" class="item__image">
+                    <picture>
+                        <img src="images/product1.jpg">
+                    </picture>
+                </a>
+                <div class="item__content">
+                    <div class="item__content_tags">
+                        <a href="#">Регулирующая арматура</a>
+                    </div>
+                    <div class="item__content_title">
+                        <a href="/project-item.html">Почему Вогез круче всех в мире?</a>
+                    </div>
+                    <div class="item__content_text">Для определения объема и объемного расхода жидкости, протекающей в закрытой, протекающей в закрытой</div>
+                    <div class="item__content_date">17.07.2025</div>
+                </div>
+            </div>
+            <div class="item">
+                <a href="/project-item.html" class="item__image">
+                    <picture>
+                        <img src="images/product1.jpg">
+                    </picture>
+                </a>
+                <div class="item__content">
+                    <div class="item__content_tags">
+                        <a href="/project-item.html">Регулирующая арматура</a>
+                    </div>
+                    <div class="item__content_title">
+                        <a href="/project-item.html">Почему Вогез круче всех в мире?</a>
+                    </div>
+                    <div class="item__content_text">Для определения объема и объемного расхода жидкости, протекающей в закрытой, протекающей в закрытой</div>
+                    <div class="item__content_date">17.07.2025</div>
+                </div>
+            </div>
+        </div>
+        <div class="project__footer">
+            <button class="btn show_more">
+                <span>Показать еще</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 8L10 12L14 8" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
         </div>
     </div>
 </section>
-
-
-
-
-                <div popover="" id="vebinar-popup">
-    <div class="popover-header flex">
-        <div class="popover-title">Предложить тему</div>
-        <button popovertarget="vebinar-popup" popovertargetaction="hide" class="close">×</button>
-    </div>
-
-    <form data-form="vebinar" action="">
-        <div class="input-wrapper">
-            <input type="text" name="company" maxlength="300" placeholder="Название организации">
-        </div>
-        <div class="input-wrapper">
-            <input type="text" name="user" maxlength="300" placeholder="Контактное лицо (ФИО)">
-        </div>
-        <div class="input-wrapper">
-            <input type="text" data-maska="+375(##)###-##-##" name="phone" placeholder="Телефон *"  required="">
-        </div>
-        <div class="input-wrapper">
-            <input type="email" name="email" maxlength="40" required="" placeholder="E-mail *">
-        </div>
-        <div class="input-wrapper">
-            <input type="text" name="theme" maxlength="300" placeholder="Тема">
-        </div>
-
-        <div class="input-wrapper">
-            <div class="form-popover-note"> * Это поле не может быть пустым</div>
-        </div>
-
-        <div class="input-wrapper">
-            <label for="policy" class="checkbox">
-                <input value="1" required="" name="policy" type="checkbox" id="policy">
-                <span>Отправляя вопрос вы соглашаетесь с <a href="/privacy/">Политикой конфиденциальности</a> </span>
-            </label>
-
-            <label class="checkbox">
-                <input value="1" required="" name="personal" type="checkbox" id="personal">
-                <span>Даю согласие на обработку моих персональных данных  для получения рекламно-информационной рассылки посредством Email.</span>
-            </label>
-        </div>
-
-        <div class="input-wrapper">
-            <button class="btn-blue btn-large btn">Отправить</button>
-        </div>
-
-    </form>
-</div>
         </main>
 <footer class="footer">
 
