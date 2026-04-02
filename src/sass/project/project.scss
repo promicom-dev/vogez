@@ -265,7 +265,16 @@
           width: 100%;
           height: 100%;
         }
-        & picture, img,video{
+        & video{
+          width: 100% !important;
+          height: auto!important;
+          max-height: max-content!important;
+          object-fit: contain!important;
+          padding: 16px!important;
+          display: block!important;
+          border-radius: 6px!important;
+        }
+        & picture, img{
           width: 100%;
           height: 100%;
           object-fit: cover;
@@ -344,20 +353,49 @@
       }
       &__img{
         border-radius: 4px;
-        height: 242px;
+        //height: 242px;
         max-width: 514px;
-        width: 100%;
+        cursor: pointer;
+        //width: 100%;
         display: block;
         overflow: hidden;
-        background: #9FCCFF;
+        //background: #9FCCFF;
         @media screen and (min-width: 767px) {
-          height: 342px;
+          //height: 342px;
         }
         & picture, img{
           width: 100%;
-          height: 100%;
-          object-fit: cover;
+          height: auto;
+          object-fit: contain;
           display: block;
+        }
+      }
+      &__gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+        gap: 13px;
+        .contentItem__img{
+          border-radius: 4px;
+          height: 242px;
+          max-width: 514px;
+          width: 100%;
+          display: block;
+          overflow: hidden;
+          cursor: pointer;
+          background: #9FCCFF;
+          @media screen and (min-width: 767px) {
+            height: 342px;
+          }
+          & picture, img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        }
+        // Если нужно ограничить максимальное количество колонок
+        @media (min-width: 1400px) {
+          grid-template-columns: repeat(4, minmax(268px, 1fr));
         }
       }
       &__list{
@@ -391,4 +429,83 @@
 
 
 
+}
+
+.contentItem__wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Реверс - изображение справа, текст слева */
+.contentItem__wrapper--reverse {
+  flex-direction: row-reverse;
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 990px) {
+  .contentItem__wrapper {
+    gap: 30px;
+    flex-direction: column;
+  }
+  .contentItem__wrapper--reverse {
+    flex-direction: column;
+  }
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 480px) {
+  .contentItem__wrapper {
+    gap: 20px;
+  }
+}
+
+
+.contentItem__image {
+  flex: 1;
+}
+
+.contentItem__content {
+  flex: 1;
+  /*font-size: 16px;*/
+}
+.item__content_text:empty {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Или если есть пробелы/переносы */
+.item__content_text:blank {
+  display: none;
+}
+/* Адаптация видео под блок */
+.contentItemFirst__image .imgVideo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.contentItemFirst__image .video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Для изображений тоже */
+.contentItemFirst__image picture,
+.contentItemFirst__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.project__items.allItems .item:first-child .item__content_text {
+  -webkit-line-clamp: 3;
+  max-height: calc(1.5em * 3);
 }
