@@ -6,7 +6,7 @@
     line-height: 128%;
     font-weight: 700;
     color: #000000;
-    padding-bottom: 32px;
+    padding-bottom: 20px;
 
     @media screen and (max-width: 566px) {
       font-size: 28px;
@@ -57,8 +57,8 @@
     flex-wrap: wrap;
     gap: 16px 8px;
     @media screen and (min-width: 767px) {
-      padding-top: 64px;
-      padding-bottom: 64px;
+      //padding-top: 64px;
+      //padding-bottom: 64px;
       gap: 32px 8px;
     }
     &.allItems{
@@ -70,10 +70,10 @@
             .item{
               &__image{
                 border-radius: 8px;
-                height: 489px;
-                @media screen and (min-width: 992px) {
-                  height: 689px;
-                }
+                height: 460px;
+                //@media screen and (min-width: 992px) {
+                //  height: 689px;
+                //}
 
               }
               &__content{
@@ -87,7 +87,8 @@
                     font-size: 32px;
                   }
                   a {
-                    min-height: 80px;
+                    max-height: 80px;
+                    min-height: max-content;
                     -webkit-line-clamp: 2;
                   }
                 }
