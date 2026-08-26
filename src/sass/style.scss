@@ -1,8 +1,8 @@
 //отключить перед сборкой css для прода
-//@import "styleProd/styleProd";
+//@import "styleProd/styleProd.css";
 //@import "styleProd/splideProd";
-//
-//
+
+
 //@import "aboutBlock/aboutFirstBlock";
 //@import "aboutBlock/aboutNumberBlock";
 //@import "aboutBlock/aboutSlideBlock";
@@ -12,5 +12,8 @@
 //@import "aboutBlock/aboutTimelineBlock";
 //
 //@import "vebinar/vebinarAdd";
+//
+//@import "project/project";
 
-@import "project/project";
+
+@import "mailing/mailing";
